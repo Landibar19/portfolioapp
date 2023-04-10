@@ -1,0 +1,58 @@
+@import '../../../src/styles/Styles.scss';
+
+
+.about{
+    display:block;
+    align-items: center;
+    margin: 40px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+        margin: auto;
+        
+    }
+   
+    
+    @include custom{
+        display:flex;
+    }
+
+    h2{
+        margin: 15px;
+    }
+    &_description{
+        display: block;
+        margin: 2px;
+        width:30rem;
+        font-size: calc(10px + 0.390625vw);
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: start;
+        line-height: 150%;
+        
+    }
+    &_skills{
+        display: block;
+        font-size: calc(10px + 0.390625vw);
+        margin-top:20px ;
+
+    }
+    li{
+        font-size: large;
+        &:hover{
+            color: rgb(119, 119, 80);
+            transition: all;
+            transition-duration: 0.4s;
+            
+        }
+    }
+    img{
+        width: 300px;
+        height: auto;
+        border-radius: 32px;
+        margin-top:auto;
+        padding-top:-32px;
+       
+    }
+}

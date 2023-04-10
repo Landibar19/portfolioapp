@@ -1,0 +1,135 @@
+@import '../../styles/Styles.scss';
+
+.header{
+    width: 100%;
+    height: 40px;
+    background-color:transparent;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+  
+
+    &_content{
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 16px;
+        
+        @include custom{
+            padding: 0 32px;
+        }
+        transition: 0.3s ease padding;
+        display: flex;
+        height: 100%;
+        align-items:center;
+
+         & > div {
+            flex: 1;
+            white-space: nowrap;
+    
+             &:nth-child(2){
+                display: flex;
+                justify-content: center;
+                height: 100%;
+            }
+
+            &:last-of-type {
+                display: flex;
+                justify-content: flex-end;
+                flex: 0;
+            }
+        }
+    }
+    &_button{
+        display: none;
+        @include custom{
+            display: initial;
+        }
+    }
+    &_toggler{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(22, 20, 20);
+        color: white;
+        cursor: pointer;
+        border: none;
+        @include custom{
+            display: none;
+        }
+        & > svg{
+            display: block;
+            font-size: 32px;
+        }
+    }
+}
+
+img{
+padding-top: 10px;
+width: 70px;
+height: 60px;
+font-weight: 700;
+color:aliceblue;
+}
+
+.nav{
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    right:-100%;
+   
+    background-color: rgb(55, 53, 53);
+    text-align: center;
+    padding: 16px 0;
+
+    &--open{
+        transition: 0.2s ease right;
+        right: 0;
+    }
+
+    &_item{
+        display: block;
+        padding: 16px;
+        text-decoration: none;
+        color:inherit;
+        height: 100%;
+        transition: 0.3 ease color;
+        &:hover{
+            color:rgb(36, 142, 142);
+        }
+    }
+    @include custom {
+        width: auto;
+        padding: 0;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: initial;
+
+        &_item{
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_button_container{
+            @include custom{
+                display: none;
+            }
+            padding: 16px;
+        }
+    }
+}
+
+.button{
+    font-weight: 500;
+    color:rgb(63, 196, 196);
+    border:2px solid 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 0.2em 0 2px;
+    background-color:rgb(61, 61, 61);
+   
+
+    
+}
