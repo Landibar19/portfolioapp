@@ -2,6 +2,7 @@ import './Styles.scss'
 import React, { useState } from 'react'
 import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   
@@ -12,11 +13,14 @@ const Header = () => {
     <div className='header'>
       <div className='header_content'>
         <div>
-          <span className='logo'>Lizander</span>
+          <Link to={'/'}>
+            <span className='logo'>Lizander</span>
+          </Link>
+          
         </div>
         <div>
           <nav className={`${`nav`} ${showMenu ? [`nav--open`]: {}}`}>
-            <a className='nav_item' href="/home">Home</a>
+            <a className='nav_item' href="/">Home</a>
             <a className='nav_item' href="/portfolio">Portfolio</a>
             <a className='nav_item' href="/about">About</a>
             <a className='nav_item' href="/contact">Contact</a>
