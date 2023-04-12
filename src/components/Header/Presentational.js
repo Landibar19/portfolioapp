@@ -2,7 +2,7 @@ import './Styles.scss'
 import React, { useState } from 'react'
 import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   
@@ -13,9 +13,10 @@ const Header = () => {
     <div className='header'>
       <div className='header_content'>
         <div>
-          <Link to={'/'}>
-            <span className='logo'>Lizander</span>
-          </Link>
+          
+            <a href='/' className='logo'>Lizander</a>
+        
+        
           
         </div>
         <div>
@@ -23,7 +24,7 @@ const Header = () => {
             <a className='nav_item' href="/">Home</a>
             <a className='nav_item' href="/portfolio">Portfolio</a>
             <a className='nav_item' href="/about">About</a>
-            <a className='nav_item' href="/contact">Contact</a>
+            <a className='nav_item' href="/contact_us">Contact</a>
             <div className='nav_button_container'>
               <Button/>
             </div>
