@@ -4,6 +4,7 @@ import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
 
 
+
 const Header = () => {
   
   const [showMenu, setShowMenu ] = useState(false)
@@ -13,6 +14,7 @@ const Header = () => {
     <div className='header'>
       <div className='header_content'>
         <div>
+        
           
             <a href='/' className='logo'>Lizander</a>
         
